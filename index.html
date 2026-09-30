@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="templates/production.css">
   <link rel="stylesheet" href="templates/campaign.css">
   <link rel="stylesheet" href="templates/newsletter.css">
+  <link rel="stylesheet" href="templates/analytics.css">
 </head>
 <body>
   <a class="skip-link" href="#template-stage">Skip to dashboard</a>
@@ -26,7 +27,7 @@
 
     <div class="studio-layout">
       <aside class="template-rail" aria-label="Dashboards">
-        <div class="rail-heading"><h2>All dashboards</h2><span>3</span></div>
+        <div class="rail-heading"><h2>All dashboards</h2><span>4</span></div>
         <nav id="template-picker" aria-label="Choose a dashboard">
           <button class="template-choice is-selected" data-template="production" aria-pressed="true">
             <span data-icon="columns-3" aria-hidden="true"></span><span class="choice-text">Content board</span>
@@ -36,6 +37,9 @@
           </button>
           <button class="template-choice" data-template="newsletter" aria-pressed="false">
             <span data-icon="mail" aria-hidden="true"></span><span class="choice-text">Newsletter ideas</span>
+          </button>
+          <button class="template-choice" data-template="analytics" aria-pressed="false">
+            <span data-icon="chart-line" aria-hidden="true"></span><span class="choice-text">Content analytics</span>
           </button>
         </nav>
         <div class="rail-foot"><span data-icon="database"></span><span id="database-summary">Skynet Content Ideas</span></div>
@@ -49,7 +53,7 @@
       </section>
     </div>
 
-    <footer class="studio-footer"><p><span data-icon="flask-conical"></span>Production data snapshot · Local review only</p><button class="button button-ghost" id="use-template">Data & fields<span data-icon="arrow-right"></span></button></footer>
+    <footer class="studio-footer"><p><span data-icon="flask-conical"></span>Production data snapshot · Design review</p><button class="button button-ghost" id="use-template">Data & fields<span data-icon="arrow-right"></span></button></footer>
   </main>
 
   <dialog id="studio-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><h2 id="dialog-title"></h2><button class="button button-ghost icon-button" id="close-dialog" aria-label="Close dialog"><span data-icon="x"></span></button></div><div id="dialog-content"></div></dialog>
@@ -59,6 +63,7 @@
   <script src="templates/production.js"></script>
   <script src="templates/campaign.js"></script>
   <script src="templates/newsletter.js"></script>
+  <script src="templates/analytics.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

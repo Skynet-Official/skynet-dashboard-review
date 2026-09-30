@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3effa">
+  <title>Skynet · Dashboards</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="templates/production.css">
+  <link rel="stylesheet" href="templates/campaign.css">
+  <link rel="stylesheet" href="templates/newsletter.css">
+</head>
+<body>
+  <a class="skip-link" href="#template-stage">Skip to dashboard</a>
+  <header class="site-header">
+    <a class="wordmark" href="#production" aria-label="Skynet dashboards"><span data-icon="sparkles"></span>skynet</a>
+    <div class="header-end"><span class="review-label">Skynet Labs · Team preview</span><button class="button button-ghost" id="review-button"><span data-icon="bookmark"></span><span>Shortlist</span><span id="shortlist-count">0</span></button></div>
+  </header>
+
+  <main class="studio">
+    <section class="studio-intro" aria-labelledby="studio-title">
+      <h1 id="studio-title">Dashboards</h1>
+      <button class="button button-light" id="chat-button"><span data-icon="sparkles"></span>Create through chat<span data-icon="arrow-up-right"></span></button>
+    </section>
+
+    <div class="studio-layout">
+      <aside class="template-rail" aria-label="Dashboards">
+        <div class="rail-heading"><h2>All dashboards</h2><span>3</span></div>
+        <nav id="template-picker" aria-label="Choose a dashboard">
+          <button class="template-choice is-selected" data-template="production" aria-pressed="true">
+            <span data-icon="columns-3" aria-hidden="true"></span><span class="choice-text">Content board</span>
+          </button>
+          <button class="template-choice" data-template="campaign" aria-pressed="false">
+            <span data-icon="chart-no-axes-combined" aria-hidden="true"></span><span class="choice-text">Campaign planner</span>
+          </button>
+          <button class="template-choice" data-template="newsletter" aria-pressed="false">
+            <span data-icon="mail" aria-hidden="true"></span><span class="choice-text">Newsletter ideas</span>
+          </button>
+        </nav>
+        <div class="rail-foot"><span data-icon="database"></span><span id="database-summary">Skynet Content Ideas</span></div>
+      </aside>
+
+      <section class="workspace" aria-label="Interactive dashboard preview">
+        <div class="workspace-bar"><div class="workspace-location"><span data-icon="panels-top-left"></span><strong id="template-name">Content board</strong></div><div class="view-actions"><button class="button button-ghost icon-button" id="reset-view" aria-label="Reset view" title="Reset view"><span data-icon="rotate-ccw"></span></button><button class="button button-light" id="replay-animation" aria-label="Replay layout animation"><span data-icon="play"></span><span>Replay animation</span></button></div><button class="button button-ghost shortlist-toggle" id="shortlist-toggle" aria-pressed="false"><span data-icon="bookmark"></span><span>Shortlist</span></button></div>
+        <div id="snapshot-context" class="snapshot-context"></div>
+        <div id="template-stage"></div>
+        <footer class="demo-bar"><div class="demo-status"><span class="status-symbol" data-icon="info"></span><span id="demo-status" role="status" aria-live="polite">Production export loaded.</span></div></footer>
+      </section>
+    </div>
+
+    <footer class="studio-footer"><p><span data-icon="flask-conical"></span>Production data snapshot · Local review only</p><button class="button button-ghost" id="use-template">Data & fields<span data-icon="arrow-right"></span></button></footer>
+  </main>
+
+  <dialog id="studio-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><h2 id="dialog-title"></h2><button class="button button-ghost icon-button" id="close-dialog" aria-label="Close dialog"><span data-icon="x"></span></button></div><div id="dialog-content"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/lucide.min.js"></script>
+  <script src="assets/production-snapshot.js"></script>
+  <script src="templates/production.js"></script>
+  <script src="templates/campaign.js"></script>
+  <script src="templates/newsletter.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
